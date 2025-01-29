@@ -39,10 +39,10 @@ jobs:
         export PATH=$(pwd)/gcc-linaro-7.5.0-2019.12-i686_aarch64-elf/bin/:$PATH
         export ARCH=arm64
         export SUBARCH=arm64
-        LLVM=1 \
-        LLVM_IAS=1 \
-      	HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument" \
-      	CROSS_COMPILE=${CLANG_ROOTDIR}/bin/aarch64-linux-gnu- \
+        LLVM=1 
+        LLVM_IAS=1 
+      	HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument" 
+      	CROSS_COMPILE=${CLANG_ROOTDIR}/bin/aarch64-linux-gnu- 
       	CROSS_COMPILE_ARM32=${CLANG_ROOTDIR}/bin/arm-linux-gnueabi- 
 
     - name: Upload Kernel
